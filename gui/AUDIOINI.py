@@ -15,7 +15,6 @@ from Helper.MyLabel import MyLabel
 
 np.object = np.dtype('O')
  
-
 class SpeechSynthesisThread(QThread):
     finished_signal = pyqtSignal(str)
 
@@ -76,11 +75,6 @@ class SpeechSynthesisThread(QThread):
             fragments.append(current_fragment.strip())
 
         return fragments
-    
-    
-
-
-
 
 class AudioPlayer(QWidget):
     
@@ -113,7 +107,6 @@ class AudioPlayer(QWidget):
         self.import_text.setFixedSize(40, 20)
         self.Process.setFixedSize(40, 20)
         self.play_button.setFixedSize(40, 20)
-        
         
         # Создание комбобоксов_____________________________________________________
         self.presets_lab = QLabel("presets")
@@ -192,7 +185,6 @@ class AudioPlayer(QWidget):
         item = QTreeWidgetItem([file_path])
         self.Tree.addTopLevelItem(item)
 
-        # Set the selected item and audio path
         self.selected_item = item
         self.selected_audio_path = file_path
 
@@ -207,7 +199,7 @@ class AudioPlayer(QWidget):
 
         if not save_path:
             return
-
+        
         # Если поток уже запущен, прерываем его выполнение
         if self.synthesis_thread and self.synthesis_thread.isRunning():
             self.synthesis_thread.terminate()
