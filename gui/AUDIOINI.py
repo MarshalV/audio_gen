@@ -96,15 +96,12 @@ class AudioPlayer(QWidget):
 
         
         # Создание кнопок_____________________________________________________
-        self.import_text = QPushButton('import')
         self.Process = QPushButton('process')
         self.play_button = QPushButton('play')
         
-        self.import_text.setStyleSheet(button_style_2)
         self.Process.setStyleSheet(button_style_2)
         self.play_button.setStyleSheet(button_style_2)
         
-        self.import_text.setFixedSize(40, 20)
         self.Process.setFixedSize(40, 20)
         self.play_button.setFixedSize(40, 20)
         
@@ -145,7 +142,6 @@ class AudioPlayer(QWidget):
         self.media_frame_layout_IMG.addWidget(self.media_IMG_lab_Сonclusion)
         self.media_frame_IMG.setStyleSheet(QFrame_style_L)
         
-        process_layout.addWidget(self.import_text)
         process_layout.addWidget(self.Process)
         process_layout.addStretch()
         process_layout.addWidget(self.presets_lab)
