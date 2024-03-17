@@ -4,7 +4,6 @@ This application is designed to synthesize speech from text using the "Bark" mod
 
 ## Features
 
-- **Text Import**: Users can import text into the application.
 - **Voice Presets**: Users can select from a list of voice presets for speech synthesis.
 - **Audio Generation**: The application generates audio from the input text using the selected voice preset.
 - **Playback Control**: Users can play, pause, and resume audio playback.
@@ -15,6 +14,7 @@ This application is designed to synthesize speech from text using the "Bark" mod
 
 1. **Dependencies Installation**: Install the required dependencies by running:
 pip install PyQt5 transformers torch soundfile
+
 
 vbnet
 Copy code
