@@ -10,7 +10,9 @@ from transformers import BarkModel, AutoProcessor
 import torch
 import soundfile as sf
 from Helper.Stile_Sheets import (button_style_2, Qline_style_L, 
-                                 Combo_style_L, QFrame_style_L)
+                                 Combo_style_L, QFrame_style_L,
+                                 QTreeWidget_style, QTextEdit_style_L,
+                                 QSlider_style)
 from Helper.MyLabel import MyLabel
 
 np.object = np.dtype('O')
@@ -113,13 +115,16 @@ class AudioPlayer(QWidget):
         self.load_presets()
         
         self.Tree = QTreeWidget(self)
+        self.Tree.setStyleSheet(QTreeWidget_style)
         self.Tree.setFixedWidth(200)
         
         # Создание TextEdits_____________________________________________________
         self.text_edit_Train = QTextEdit(self)
+        self.text_edit_Train.setStyleSheet(QTextEdit_style_L)
 
         # Создание слайдера для перемотки_____________________________________________________
         self.progress_slider = QSlider(Qt.Horizontal)
+        self.progress_slider.setStyleSheet(QSlider_style)
         self.progress_slider.setRange(0, 0)
 
         # Создание таймера_____________________________________________________
